@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!--전체 페이지를 디바이스화면 맞춤형으로 반응하도록 디자인해야함-->
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="리뷰 신청">
+    <meta name="keywords" content="리뷰신청, 영화, 드라마, 애니, 리뷰">
+    <meta name="author" content="sayer">
+    <meta name="viewport" content="width-divice-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body>
+    <header>
+      <a href="main.html">메인</a><br>
+      <h1>영상리뷰 신청폼</h1>
+    </header>
+    <hr><br><br>
+    <main>
+      <div>
+        <form action="submission.html" class="form-content">
+          <div class="left">
+            <section class="v-type">
+              <span class="q-category"><label for="type">영상종류</label></span>
+              <select name="종류" id="type">
+                <option value="영화">영화</option>
+                <option value="드라마">드라마</option>
+                <option value="애니">애니</option>
+                <option value="기타">기타</option>
+              </select>
+            </section>
+            <br>
+            <section class="v-title">
+              <span class="q-category"><label for="vt">제목</label></span>
+              <br>
+              <textarea name="제목" id="vt" rows="1" cols="45" placeholder="동명 작품이 있다면, 개봉연도를 같이 써주세요 :)" required minlength="2"></textarea>
+            </section>
+            <br>
+            <section>
+              <span class="q-category"><label for="reason">신청 이유</label></span>
+              <br>
+              <textarea name="신청이유" id="reason" rows="5" cols="45" minlength="4" placeholder="작품 선정에 참고합니다!"></textarea>
+            </section>
+          </div>
+          <div class="right">
+            <section name="difference">
+              <span class="quest"><label for="differ">다른 리뷰어들의 콘텐츠와 가장 큰 차이점은?</label></span>
+              <br>
+              <textarea name="차이점" id="differ" rows="8" cols="40"></textarea>
+            </section>
+            <hr>
+            <section name="route">
+              <span class="quest">sayer의 리뷰콘텐츠를 어떻게 알게 되셨나요?</span>
+              <br><br>
+              <div>
+                <input type="radio" id="씨네랩" name="경로"><label for="씨네랩">씨네랩</label>
+                <input type="radio" id="브런치" name="경로"><label for="브런치">브런치</label>
+                <input type="radio" id="티스토리" name="경로"><label for="티스토리">티스토리</label>
+                <input type="radio" id="인스타" name="경로"><label for="인스타">인스타그램</label>
+                <br>
+                <!--기타경로 선택해야만 텍스트 입력 가능하게 만들기-->
+                <label for="기타경로">기타</label>
+                <input type="text" id="기타경로" name="경로">
+              </div>
+            </section>
+            <!--제출 버튼이 왜 혼자 페이지 바닥으로 내려갈까?-->
+            <input type="submit">
+          </div>
+        </form>
+      </div>
+    </main>
+    <hr>
+    <footer>
+      <div class="foot">
+        <i>shinahyo</i> ㅣ <a href="https://github.com/ShinAhYoung21" target="_blank">github</a> ㅣ <a href="https://archive-shin.tistory.com/" target="_blank">tech-blog</a>
+      </div>
+    </footer>
+  </body>
+</html>
